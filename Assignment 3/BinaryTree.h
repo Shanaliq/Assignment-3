@@ -30,7 +30,9 @@ public:
     BinaryTree();
     ~BinaryTree();
     void insert(Node*& Tree, ItemType &key);
-    void deleteItem(Node* tree, ItemType &key);
+    void deleteItem(Node*& tree, ItemType &key);
+    void deleteNode(Node*& tree);
+    void getPredecessor(Node* tree, ItemType& data);
     void retrieve(Node* tree, ItemType &item, bool &found) const;
     void preOrder(Node* tree) const;
     void inOrder(Node* tree) const;
