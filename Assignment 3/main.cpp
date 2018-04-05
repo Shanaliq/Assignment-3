@@ -96,6 +96,7 @@ int main(int argc, const char * argv[]) {
             }
             case 'q': {
                 std::cout << "Quitting program.. \n";
+                continueLoop=false;
                 exit(0);
                 break;
             }
@@ -103,3 +104,5 @@ int main(int argc, const char * argv[]) {
         std::cout <<"\n";
     }
 }
+
+
