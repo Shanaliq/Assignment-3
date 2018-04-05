@@ -49,14 +49,20 @@ void BinaryTree::insert(Node*& Tree, ItemType &key){
 }
 
 void BinaryTree::deleteItem(Node*& tree, ItemType &key){
-    if(key.getValue() < tree->key.getValue()){
-        deleteItem(tree->left, key);
+    bool deleteThingyFound = false;
+    
+    retrieve(tree, key, deleteThingyFound);
+    
+    if(deleteThingyFound == true){
+        if(key.getValue() < tree->key.getValue()){
+            deleteItem(tree->left, key);
+        }
+        else if(key.getValue() > tree->key.getValue()){
+            deleteItem(tree->right, key);
+        }
+        else
+            deleteNode(tree);
     }
-    else if(key.getValue() > tree->key.getValue()){
-        deleteItem(tree->right, key);
-    }
-    else
-        deleteNode(tree);
 }
 
 void BinaryTree::deleteNode(Node*& tree){
