@@ -10,6 +10,7 @@
 		80B6A7262076B8CD0080D7C2 /* ItemType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80B6A7252076B8CD0080D7C2 /* ItemType.cpp */; };
 		80B6A72A2076BAF30080D7C2 /* BinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80B6A7282076BAF30080D7C2 /* BinaryTree.cpp */; };
 		80B6A72C2076BB940080D7C2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80B6A72B2076BB940080D7C2 /* main.cpp */; };
+		80B6A72E2076BEEE0080D7C2 /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = 80B6A72D2076BEEE0080D7C2 /* makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		80B6A7282076BAF30080D7C2 /* BinaryTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryTree.cpp; sourceTree = "<group>"; };
 		80B6A7292076BAF30080D7C2 /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
 		80B6A72B2076BB940080D7C2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		80B6A72D2076BEEE0080D7C2 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
 		F47AA2FC2074152D001181ED /* Assignment 3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Assignment 3"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 				80B6A7272076B9330080D7C2 /* ItemType.h */,
 				80B6A7252076B8CD0080D7C2 /* ItemType.cpp */,
 				80B6A7152076858D0080D7C2 /* input1.txt */,
+				80B6A72D2076BEEE0080D7C2 /* makefile */,
 			);
 			path = "Assignment 3";
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			files = (
 				80B6A72A2076BAF30080D7C2 /* BinaryTree.cpp in Sources */,
 				80B6A7262076B8CD0080D7C2 /* ItemType.cpp in Sources */,
+				80B6A72E2076BEEE0080D7C2 /* makefile in Sources */,
 				80B6A72C2076BB940080D7C2 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

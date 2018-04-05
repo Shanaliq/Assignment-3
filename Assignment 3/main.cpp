@@ -39,6 +39,71 @@ void fileHandler(string file){ // handles the file input.
 
 int main(int argc, const char * argv[]) {
     bool found = false;
+    bool continueLoop = true;
+    char userInputChar;
+    int userInputNum;
+    while (continueLoop == true) {
+        std::cout << "Enter a command: ";
+        cin >> userInputChar;
+        switch (userInputChar) {
+            case 'i': {
+                std::cout << "Number to insert: ";
+                cin >> userInputNum;
+                item.initialize(userInputNum);
+                list.insert(list.root, item);
+                break;
+            }
+            case 'd': {
+                std::cout << "Number to delete: ";
+                cin >> userInputNum;
+                item.initialize(userInputNum);
+                list.deleteItem(list.root, item);
+                break;
+            }
+            case 'l': {
+                std::cout << "List Length is " << list.getLength() << "\n";
+                break;
+            }
+            case 'n': {
+                list.inOrder(list.root);
+                break;
+            }
+            case 'p': {
+                list.preOrder(list.root);
+                break;
+            }
+            case 'o': {
+                list.postOrder(list.root);
+                break;
+            }
+            case 'r': {
+                bool itemFound = false;
+                std::cout << "Item to be retrieved: ";
+                cin >> userInputNum;
+                item.initialize(userInputNum);
+                list.retrieve(list.root, item, itemFound);
+                if(itemFound == true){
+                    std::cout << "Item found in tree.";
+                }
+                else{
+                    std::cout << "Item not in tree.";
+                    
+                }
+                break;
+            }
+            case 'q': {
+                std::cout << "Quitting program.. \n";
+                exit(0);
+                break;
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
     fileHandler("/Users/nekosama/Downloads/input1.txt");
     list.inOrder(list.root);
     std::cout<< "\n";
