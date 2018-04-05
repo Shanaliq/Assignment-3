@@ -9,7 +9,6 @@
 #include "ItemType.h"
 #include <iostream>
 
-
 ItemType::ItemType(){
 }
 
