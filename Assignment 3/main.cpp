@@ -26,7 +26,7 @@ void fileHandler(string file){ // handles the file input.
         while(!fs.eof())
         {
             item.initialize(input);
-            list.insert(item);
+            list.insert(list.root , item);
             fs >> input;
         }
     }
@@ -38,5 +38,14 @@ void fileHandler(string file){ // handles the file input.
     
     
 int main(int argc, const char * argv[]) {
+    bool found = false;
     fileHandler("/Users/nekosama/Downloads/input1.txt");
+    list.inOrder(list.root);
+    std::cout<< "\n";
+    list.postOrder(list.root);
+    std::cout<< "\n";
+    list.preOrder(list.root);
+    item.initialize(12);
+    list.retrieve(list.root,item,found);
+    std::cout<<found;
 }

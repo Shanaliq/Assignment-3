@@ -23,16 +23,16 @@ struct Node{
 class BinaryTree{
 
 private:
-    Node *root;
     int length;
 public:
+    Node *root;
     BinaryTree();
     ~BinaryTree();
-    void insert(ItemType &key);
-    void deleteItem(ItemType &key);
-    void retrieve(ItemType &item, bool &found) const;
-    void preOrder() const;
-    void inOrder() const;
-    void postOrder() const;
+    void insert(Node*& Tree, ItemType &key);
+    void deleteItem(Node* tree, ItemType &key);
+    void retrieve(Node* tree, ItemType &item, bool &found) const;
+    void preOrder(Node* tree) const;
+    void inOrder(Node* tree) const;
+    void postOrder(Node* tree) const;
     int getLength() const;
 };

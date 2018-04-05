@@ -7,6 +7,9 @@
 //
 
 #include "BinaryTree.h"
+#include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
 
 
@@ -19,32 +22,70 @@ BinaryTree::~BinaryTree(){
     
 }
 
-void BinaryTree::insert(ItemType &key){
-    if(root == nullptr){
-        
+void BinaryTree::insert(Node*& Tree, ItemType &key){
+    if(Tree == nullptr){
+        Tree = new Node;
+        Tree->right = nullptr;
+        Tree->left = nullptr;
+        Tree->key = key;
+    }
+    else if(key.getValue() < Tree->key.getValue()){
+        insert(Tree->left, key);
+    }
+    else{
+        insert(Tree->right,key);
     }
 }
 
-void BinaryTree::deleteItem(ItemType &key){
+void BinaryTree::deleteItem(Node* tree, ItemType &key){
     
 }
 
-void BinaryTree::retrieve(ItemType &item, bool &found) const{
-    
+void BinaryTree::retrieve(Node* tree, ItemType &item, bool &found) const{
+    if(tree == NULL){
+        found = false;
+    }
+    else if(item.getValue() < tree->key.getValue()){
+        retrieve(tree->left, item, found);
+    }
+    else if(item.getValue()>tree->key.getValue()){
+        retrieve(tree->right, item, found);
+    }
+    else{
+        item = tree->key;
+        found = true;
+    }
 }
 
-void BinaryTree::preOrder() const{
-    
+void BinaryTree::preOrder(Node* tree) const{
+    if (tree != nullptr)
+    {
+        std::cout << tree->key.getValue() << " ";
+        preOrder(tree->left);
+        preOrder(tree->right);
+    }
 }
 
-void BinaryTree::inOrder() const{
-    
+void BinaryTree::inOrder(Node* tree) const{
+    if (tree != nullptr)
+    {
+        inOrder(tree->left);
+        std::cout << tree->key.getValue() << " ";
+        inOrder(tree->right);
+    }
 }
 
-void BinaryTree::postOrder() const{
-    
+void BinaryTree::postOrder(Node* tree) const{
+    if (tree != nullptr)
+    {
+        postOrder(tree->left);
+        postOrder(tree->right);
+        std::cout << tree->key.getValue() << " ";
+    }
 }
+
+
 
 int BinaryTree::getLength() const{
-    return null;
+    return 0;
 }
