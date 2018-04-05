@@ -23,17 +23,21 @@ BinaryTree::~BinaryTree(){
 }
 
 void BinaryTree::insert(Node*& Tree, ItemType &key){
-    if(Tree == nullptr){
-        Tree = new Node;
-        Tree->right = nullptr;
-        Tree->left = nullptr;
-        Tree->key = key;
-    }
-    else if(key.getValue() < Tree->key.getValue()){
-        insert(Tree->left, key);
-    }
-    else{
-        insert(Tree->right,key);
+    bool duplicate = false;
+    retrieve(Tree, key, duplicate);
+    if(duplicate == false){
+        if(Tree == nullptr){
+            Tree = new Node;
+            Tree->right = nullptr;
+            Tree->left = nullptr;
+            Tree->key = key;
+        }
+        else if(key.getValue() < Tree->key.getValue()){
+            insert(Tree->left, key);
+        }
+        else{
+            insert(Tree->right,key);
+        }
     }
 }
 
