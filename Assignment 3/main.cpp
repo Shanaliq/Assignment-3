@@ -38,10 +38,13 @@ void fileHandler(string file){ // handles the file input.
 
 
 int main(int argc, const char * argv[]) {
-    bool found = false;
     bool continueLoop = true;
     char userInputChar;
     int userInputNum;
+    std::cout <<"Commands - insert (i), delete (d), retrieve (r), length (l), in-order(n), pre-order (p), post-order (o), quit(q)\n";
+    
+    
+    fileHandler("/Users/nekosama/Downloads/input1.txt");
     while (continueLoop == true) {
         std::cout << "Enter a command: ";
         cin >> userInputChar;
@@ -97,20 +100,6 @@ int main(int argc, const char * argv[]) {
                 break;
             }
         }
+        std::cout <<"\n";
     }
-    
-    
-    
-    
-    
-    
-    fileHandler("/Users/nekosama/Downloads/input1.txt");
-    list.inOrder(list.root);
-    std::cout<< "\n";
-    list.postOrder(list.root);
-    std::cout<< "\n";
-    list.preOrder(list.root);
-    item.initialize(12);
-    list.retrieve(list.root,item,found);
-    std::cout<<found;
 }
