@@ -29,6 +29,7 @@ public:
     Node *root;
     BinaryTree();
     ~BinaryTree();
+    void destroy(Node*& tree);
     void insert(Node*& Tree, ItemType &key);
     void deleteItem(Node*& tree, ItemType &key);
     void deleteNode(Node*& tree);

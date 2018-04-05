@@ -19,15 +19,16 @@ BinaryTree::BinaryTree(){
 }
 
 BinaryTree::~BinaryTree(){
+    destroy(root);
 }
 
-//void BinaryTree::destroy(Node*& tree){
-//    if(tree != NULL){
-//        destroy(tree->left);
-//        destroy(tree->right);
-//        delete tree;
-//    }
-//}
+void BinaryTree::destroy(Node*& tree){
+   if(tree != NULL){
+        destroy(tree->left);
+        destroy(tree->right);
+       delete tree;
+    }
+}
 
 void BinaryTree::insert(Node*& Tree, ItemType &key){
     bool duplicate = false;
